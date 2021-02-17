@@ -8,7 +8,7 @@ public class DataRead {
         String property = "";
         Properties prop = new Properties();
         try {
-            prop.load(new FileInputStream("C:\\Users\\Rajkamal\\IdeaProjects\\LinkedIn_Selenium\\src\\test\\java\\com\\bridgelabz\\files\\LoginData.properties"));
+            prop.load(new FileInputStream("C:\\Users\\Rajkamal\\IdeaProjects\\LinkedIn_Selenium\\src\\test\\java\\com\\bridgelabz\\repository\\LoginData.properties"));
             property = prop.getProperty(key);
         } catch (Exception e) {
             e.printStackTrace();
