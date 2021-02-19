@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.test.LinkedInTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-18T09:47:13" hostname="ADMIN" time="23.601">
+  <properties/>
+  <testcase name="SignOutInApplication" classname="com.bridgelabz.test.LinkedInTest" time="23.601"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 88.0.4324.96 (resolved driver for Chrome 88)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Rajkamal\.cache\selenium\chromedriver\win32\88.0.4324.96\chromedriver.exe
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 37399
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Feb 18, 2021 3:17:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Feb 18, 2021 3:17:16 PM com.bridgelabz.pages.Login LoginToApplication
+INFO: Clicking on SignIn Button
+Feb 18, 2021 3:17:17 PM com.bridgelabz.pages.Login LoginToApplication
+INFO: Entering username
+Feb 18, 2021 3:17:19 PM com.bridgelabz.pages.Login LoginToApplication
+INFO: Entering Password
+Feb 18, 2021 3:17:28 PM com.bridgelabz.pages.Login LoginToApplication
+INFO: Clicking on submit button
+Feb 18, 2021 3:17:29 PM com.bridgelabz.pages.SignOut signOutFromApplication
+INFO: Clicking on Me dropdown
+Feb 18, 2021 3:17:32 PM com.bridgelabz.pages.SignOut signOutFromApplication
+INFO: Clicking on SignOut
+]]></system-err>
+</testsuite>

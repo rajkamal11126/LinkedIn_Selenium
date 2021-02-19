@@ -2,11 +2,11 @@ com/bridgelabz/pages/Login.java
  com.bridgelabz.pages.Login
 com/bridgelabz/BaseTest/Base.java
  com.bridgelabz.BaseTest.Base
+com/bridgelabz/util/DataRead.java
+ com.bridgelabz.util.DataRead
 com/bridgelabz/pages/SignOut.java
  com.bridgelabz.pages.SignOut
 com/bridgelabz/test/LinkedInTest.java
  com.bridgelabz.test.LinkedInTest
 com/bridgelabz/pages/FileUpload.java
  com.bridgelabz.pages.FileUpload
-com/bridgelabz/util/DataRead.java
- com.bridgelabz.util.DataRead
