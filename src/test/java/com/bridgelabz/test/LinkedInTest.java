@@ -1,30 +1,27 @@
 package com.bridgelabz.test;
 
 import com.bridgelabz.BaseTest.Base;
+import com.bridgelabz.pages.Login;
+import com.bridgelabz.pages.SignOut;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.awt.*;
-
 import static com.bridgelabz.pages.FileUpload.fileUploadInApplication;
-import static com.bridgelabz.pages.Login.LoginToApplication;
-import static com.bridgelabz.pages.SignOut.signOutFromApplication;
-
 
 public class LinkedInTest extends Base {
 
-
     @Test(priority = 1)
-    public void LoginToLinkedInApplication() {
+    public void loginToApplication(){
+        Login login = PageFactory.initElements(driver, Login.class);
         try {
-            LoginToApplication();
+           login.LoginToApplication();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         String my_title = driver.getTitle();
         String expected_title = "Feed | LinkedIn";
         Assert.assertEquals(my_title,expected_title);
-
     }
 
     @Test(priority = 2)
@@ -32,7 +29,7 @@ public class LinkedInTest extends Base {
         try {
             fileUploadInApplication();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+        e.printStackTrace();
         } catch (AWTException e) {
             e.printStackTrace();
         }
@@ -44,13 +41,13 @@ public class LinkedInTest extends Base {
 
     @Test(priority = 3)
     public void SignOutInApplication() {
+        SignOut signOut = PageFactory.initElements(driver, SignOut.class);
         try {
-            signOutFromApplication();
+            signOut.signOutFromApplication();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (AWTException e) {
             e.printStackTrace();
         }
-
     }
 }

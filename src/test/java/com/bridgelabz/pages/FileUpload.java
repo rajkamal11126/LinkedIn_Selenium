@@ -1,29 +1,47 @@
 package com.bridgelabz.pages;
 
 import com.bridgelabz.BaseTest.Base;
-import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import java.awt.*;
 import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.util.logging.Logger;
 
 public class FileUpload extends Base {
 
     public static void fileUploadInApplication() throws InterruptedException, AWTException {
-
         Logger log = Logger.getLogger("Logger");
-        Login.LoginToApplication();
-        //Uploading file using robot class
+        Login login = PageFactory.initElements(driver, Login.class);
+        login.LoginToApplication();
+        Thread.sleep(1000);
         Robot robot = new Robot();
-        robot.mouseMove(209, 280);
+        robot.mouseMove(440, 300);
+        log.info("Clicking on photo button");
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        log.info("Clicking on profile pic");
+        Thread.sleep(1000);
+        log.info("Entering photo name");
+        robot.keyPress(KeyEvent.VK_SHIFT);
+        robot.keyPress(KeyEvent.VK_P);
+        robot.keyRelease(KeyEvent.VK_SHIFT);
+        robot.keyPress(KeyEvent.VK_PERIOD);
+        robot.keyPress(KeyEvent.VK_J);
+        robot.keyPress(KeyEvent.VK_P);
+        robot.keyPress(KeyEvent.VK_G);
+        log.info("Clicking Enter");
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
         Thread.sleep(3000);
-        driver.findElement(By.className("pv-top-card__edit-photo-button")).click();
-        log.info("Clicking on edit photo button");
-        Thread.sleep(5000);
+        robot.mouseMove(900, 570);
+        log.info("Clicking on done button");
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        Thread.sleep(10000);
+        Thread.sleep(2000);
+        robot.mouseMove(900, 580);
+        log.info("Clicking on post button");
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(5000);
+        log.info("Photo post successfully...");
     }
 }
